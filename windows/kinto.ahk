@@ -469,6 +469,12 @@ GroupAdd, intellij, ahk_exe idea64.exe
         ; Dev Tools
         !^i::send {Ctrl Down}{Shift Down}i{Shift Up}{Ctrl Up}
         !^j::send {Ctrl Down}{Shift Down}j{Shift Up}{Ctrl Up}
+        ; Browser History
+        ^y::send {Ctrl Down}h{Ctrl Up}
+        ; View Page Source
+        !^u::send {Ctrl Down}u{Ctrl Up}
+        ; Downloads
+        !^l::send {Ctrl Down}j{Ctrl Up}
         ; Open preferences
         #IfWinActive ahk_exe firefox.exe
             ^,::send, {Ctrl Down}t{Ctrl Up}about:preferences{Enter}
