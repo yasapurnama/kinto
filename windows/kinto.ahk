@@ -260,7 +260,7 @@ GroupAdd, intellij, ahk_exe idea64.exe
     ; $LCtrl::LWin   ; MacModifiers
 
     ; Win + R to start Run Command (Need Disable Windows Game Bar/Change Start Recording Shortcut)
-    !r::Send {LWin down}r{LWin up}   ; MacModifiers
+    !r::Send {LWin down}r{LWin up}   ; WinModifiers
 
     ; Hack to disable start menu on winkey
     ; Static
