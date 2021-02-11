@@ -184,6 +184,8 @@ GroupAdd, vstudio, ahk_exe devenv.exe
 GroupAdd, intellij, ahk_exe idea.exe
 GroupAdd, intellij, ahk_exe idea64.exe
 
+GroupAdd, filemanager, ahk_exe explorer.exe
+
 ; SetCapsLockState, AlwaysOff ; CB/IBM
 
 #IfWinNotActive ahk_group virtm
@@ -756,6 +758,14 @@ GroupAdd, intellij, ahk_exe idea64.exe
         ; !x::Send {LCtrl down}x{Ctrl up}  ; CB/IBM
         ; !y::Send {LCtrl down}y{Ctrl up}  ; CB/IBM
         ; !z::Send {LCtrl down}z{Ctrl up}  ; CB/IBM
+    #If
+
+    ; Finder Hotkey
+    #IfWinActive ahk_group filemanager
+        ; Show/Hide Hidden Files
+        ^+.::send {Alt Down}vhh{Alt Up}
+        ; Delete Files Permanently
+        $^!Backspace::send {LShift down}{Delete}{LShift up}
     #If
 #If
 
