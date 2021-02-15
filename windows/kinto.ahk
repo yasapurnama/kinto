@@ -62,6 +62,8 @@ Menu, Tray, Add, Autodetect Keyboards, autodetect
 ; Menu, Tray, check, Autodetect Keyboards ; Autodetect
 ; Menu, Tray, disable, Autodetect Keyboards ; CB/IBM
 Menu, Tray, Add, Suspend Kinto, tray_suspend
+Menu, Tray, Add, Prevent Screen Idle, allow_idle
+Menu, Tray, Check, Prevent Screen Idle    ; PreventIdle
 ; Menu, Tray, Add, Returns to Desktop, min
 Menu, Tray, Add
 Menu, Tray, Add, Close, Exit
@@ -119,6 +121,23 @@ tray_suspend(){
     ; Refocus last active Window
     Send {LAlt down}{tab}{LAlt up}
 }
+
+prevent_idle() {
+    Run, "%A_ScriptDir%\NoShell.vbs" "%A_ScriptDir%\toggle_idle.bat" prevent, "%A_ScriptDir%"
+}
+
+allow_idle() {
+    Run, "%A_ScriptDir%\NoShell.vbs" "%A_ScriptDir%\toggle_idle.bat" allow, "%A_ScriptDir%"
+}
+
+; Prevent Screen Idle
+SetTimer, MoveMouse           ; PreventIdle
+MoveMouse:                    ; PreventIdle
+If ( A_TimeIdle > 59999 ) {   ; PreventIdle
+    MouseMove, 1, 1,, R       ; PreventIdle
+    MouseMove, -1, -1,, R     ; PreventIdle
+}                             ; PreventIdle
+Return                        ; PreventIdle
 
 Exit() {
     Gosub ReleaseModifiers
