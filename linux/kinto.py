@@ -517,3 +517,8 @@ define_keymap(re.compile(termStr, re.IGNORECASE),{
     K("RC-SLASH"): K("C-Shift-SLASH"),
     K("RC-KPASTERISK"): K("C-Shift-KPASTERISK"),
 }, "terminals")
+
+define_keymap(re.compile("thunar", re.IGNORECASE),{
+    K("C-Shift-DOT") : K("LC-H"),              # Show/Hide Hidden Files
+    K("C-M-Backspace") : K("Shift-Delete"),    # Delete Files Permanently
+}, "Thunar")
