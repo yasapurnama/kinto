@@ -218,6 +218,9 @@ define_keymap(re.compile(browserStr, re.IGNORECASE),{
     K("RC-Key_7"): K("M-Key_7"),
     K("RC-Key_8"): K("M-Key_8"),
     K("RC-Key_9"): K("M-Key_9"),    # Jump to last tab
+    K("RC-Y"): K("RC-H"),           # Browser History
+    K("M-RC-U"): K("RC-U"),         # View Page Source
+    K("M-RC-L"): K("RC-J"),         # Downloads
 })
 
 # Open preferences in browsers
