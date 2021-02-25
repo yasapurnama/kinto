@@ -237,11 +237,11 @@ define_keymap(None,{
     # K("Super-Left"):K("C-M-Left"),                # Default SL - Change workspace (budgie)
     K("RC-Q"): K("M-F4"),                         # Default SL - not-popos
     K("RC-H"):K("Super-h"),                       # Default SL - Minimize app (gnome/budgie/popos/fedora)
-    K("M-Tab"): pass_through_key,                 # Default not-xfce4 - Cmd Tab - App Switching Default
-    K("RC-Tab"): K("M-Tab"),                      # Default not-xfce4 - Cmd Tab - App Switching Default
-    K("RC-Shift-Tab"): K("M-Shift-Tab"),          # Default not-xfce4 - Cmd Tab - App Switching Default
-    K("RC-Grave"): K("M-Grave"),                  # Default not-xfce4 - Cmd ` - Same App Switching
-    K("RC-Shift-Grave"): K("M-Shift-Grave"),      # Default not-xfce4 - Cmd ` - Same App Switching
+    # K("M-Tab"): pass_through_key,                 # Default not-xfce4 - Cmd Tab - App Switching Default
+    # K("RC-Tab"): K("M-Tab"),                      # Default not-xfce4 - Cmd Tab - App Switching Default
+    # K("RC-Shift-Tab"): K("M-Shift-Tab"),          # Default not-xfce4 - Cmd Tab - App Switching Default
+    # K("RC-Grave"): K("M-Grave"),                  # Default not-xfce4 - Cmd ` - Same App Switching
+    # K("RC-Shift-Grave"): K("M-Shift-Grave"),      # Default not-xfce4 - Cmd ` - Same App Switching
     # K("Super-Right"):K("Super-Page_Up"),          # SL - Change workspace (ubuntu/fedora)
     # K("Super-Left"):K("Super-Page_Down"),         # SL - Change workspace (ubuntu/fedora)
     # K("Super-Right"):K("Super-C-Up"),             # SL - Change workspace (popos)
@@ -250,17 +250,17 @@ define_keymap(None,{
     # K("RC-Space"): K("Super-Space"),              # SL - Launch Application Menu (eos)
     # K("RC-H"): K("Super-Page_Down"),              # SL - Minimize app (kde_neon)
                                                   # SL - Default SL - Change workspace (kde_neon)
-    # K("RC-Space"): K("LC-Esc"),                   # SL- Launch Application Menu xfce4
-    # K("RC-F3"):K("C-M-d"),                        # SL- Show Desktop xfce4
+    K("RC-Space"): K("LC-Esc"),                   # SL- Launch Application Menu xfce4
+    K("RC-F3"):K("C-M-d"),                        # SL- Show Desktop xfce4
     # K("RC-LC-f"):K("Super-Up"),                   # SL- Maximize app eos
     # K("RC-LC-f"):K("Super-PAGE_UP"),              # SL- Maximize app manjaro
     # Basic App hotkey functions
-    # K("RC-H"):K("M-F9"),                          # SL - Minimize app xfce4
+    K("RC-H"):K("M-F9"),                          # SL - Minimize app xfce4
     # K("RC-LC-f"):K("Super-PAGE_DOWN"),            # SL - Minimize app manjaro
     # Cmd Tab - App Switching Default
-    # K("RC-Tab"): K("RC-backslash"),               # xfce4
-    # K("RC-Shift-Tab"): K("RC-Shift-backslash"),   # xfce4
-    # K("RC-Grave"): K("RC-Shift-backslash"),       # xfce4
+    K("RC-Tab"): K("M-Tab"),                      # xfce4
+    K("RC-Shift-Tab"): K("RC-Shift-backslash"),   # xfce4
+    K("RC-Grave"): K("RC-Shift-backslash"),       # xfce4
     # In-App Tab switching
     # K("M-Tab"): K("C-Tab"),                       # Chromebook/IBM - In-App Tab switching
     # K("M-Shift-Tab"): K("C-Shift-Tab"),           # Chromebook/IBM - In-App Tab switching
@@ -454,9 +454,9 @@ define_keymap(re.compile("Io.elementary.terminal|kitty", re.IGNORECASE),{
 define_keymap(re.compile(termStr, re.IGNORECASE),{
     # K("LC-Right"):K("C-M-Right"),                 # Default SL - Change workspace (budgie)
     # K("LC-Left"):K("C-M-Left"),                   # Default SL - Change workspace (budgie)
-    # K("LC-Left"):K("C-M-End"),                    # SL - Change workspace xfce4     
+    K("LC-Left"):K("C-M-End"),                    # SL - Change workspace xfce4     
     # K("LC-Left"):K("Super-Left"),                 # SL - Change workspace eos 
-    # K("LC-Right"):K("C-M-Home"),                  # SL - Change workspace xfce4     
+    K("LC-Right"):K("C-M-Home"),                  # SL - Change workspace xfce4     
     # K("LC-Right"):K("Super-Right"),               # SL - Change workspace eos
     # K("LC-Right"):K("Super-Page_Up"),             # SL - Change workspace (ubuntu/fedora)
     # K("LC-Left"):K("Super-Page_Down"),            # SL - Change workspace (ubuntu/fedora)
@@ -470,9 +470,9 @@ define_keymap(re.compile(termStr, re.IGNORECASE),{
     # K("RC-Tab"): K("M-Tab"),                      # Default not-xfce4 - Cmd Tab - App Switching Default
     # K("RC-Shift-Tab"): K("M-Shift-Tab"),          # Default not-xfce4 - Cmd Tab - App Switching Default
     # Cmd Tab - App Switching Default
-    # K("RC-Tab"): K("RC-backslash"),               # xfce4
-    # K("RC-Shift-Tab"): K("RC-Shift-backslash"),   # xfce4
-    # K("RC-Grave"): K("RC-Shift-backslash"),       # xfce4
+    K("RC-Tab"): K("M-Tab"),                      # xfce4
+    K("RC-Shift-Tab"): K("RC-Shift-backslash"),   # xfce4
+    K("RC-Grave"): K("RC-Shift-backslash"),       # xfce4
     # Converts Cmd to use Ctrl-Shift
     K("RC-V"): K("C-Shift-V"),
     K("RC-MINUS"): K("C-Shift-MINUS"),
