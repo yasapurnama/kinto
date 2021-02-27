@@ -305,6 +305,7 @@ define_keymap(None,{
     # K(""): pass_through_key,                      # cancel
     # K(""): K(""),                                 #
     K("Super-RC-t"): K("RC-M-t"),                 # Open Terminal
+    K("Super-RC-q"): K("Super-l"),                # Lock Screen
 })
 
 define_keymap(lambda wm_class: wm_class.casefold() not in mscodes,{
