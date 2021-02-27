@@ -304,6 +304,7 @@ define_keymap(None,{
     K("Alt-Delete"): K("C-Delete"),               # Default not-chromebook - Delete Right Word of Cursor
     # K(""): pass_through_key,                      # cancel
     # K(""): K(""),                                 #
+    K("Super-RC-t"): K("RC-M-t"),                 # Open Terminal
 })
 
 define_keymap(lambda wm_class: wm_class.casefold() not in mscodes,{
